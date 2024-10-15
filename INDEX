@@ -1,0 +1,30 @@
+ECG Emotion Classification Using Convolutional Neural Networks (CNN)
+
+This project focuses on the classification of electrocardiogram (ECG) signals to identify emotional states, utilizing a 1D Convolutional Neural Network (CNN). The primary motivation is to investigate how physiological signals, specifically ECG, correlate with emotions such as calmness, anxiety, and stress. Accurate emotion recognition can have significant implications in mental health monitoring, human-computer interaction, and personalized healthcare.
+
+Data Acquisition and Preprocessing
+The dataset comprises ECG recordings from the European ST-T Database and the MIT-BIH Arrhythmia Database. These datasets provide a rich source of labeled ECG data, which is essential for training and evaluating the classification model.
+
+Preprocessing Steps:
+
+Noise Reduction: Raw ECG signals often contain noise due to various interferences. We employ filtering techniques such as Butterworth low-pass filters to eliminate high-frequency noise and baseline wander.
+
+Segmentation: ECG signals are segmented into smaller windows to facilitate CNN processing. Each segment corresponds to a specific time interval, allowing the model to focus on localized patterns within the signal.
+
+Label Mapping: The emotional states are mapped to specific labels based on the associated arrhythmia patterns. Five categories are established: calm, anxiety, stress, and two additional states, enhancing the model's ability to discriminate between nuanced emotional responses.
+
+Model Architecture
+The architecture of the CNN consists of several key layers:
+
+Input Layer: Accepts preprocessed ECG segments.
+Convolutional Layers: Multiple 1D convolutional layers extract features from the ECG signals. These layers use varying kernel sizes to capture different temporal patterns within the data.
+Activation Functions: ReLU (Rectified Linear Unit) is employed to introduce non-linearity, enhancing the model's learning capability.
+Pooling Layers: Max pooling layers reduce dimensionality and extract the most salient features, improving computational efficiency.
+Fully Connected Layers: After several convolutional and pooling layers, the output is flattened and passed through fully connected layers to produce the final classification.
+Training and Evaluation
+The model is trained using a dataset split into training, validation, and testing sets. Various optimization algorithms, such as Adam, are employed to minimize the loss function, and techniques like dropout are used to prevent overfitting. The evaluation metrics include accuracy, precision, recall, and F1-score, providing comprehensive insights into the model’s performance across different emotional categories.
+
+Visualization and Insights
+Throughout the project, visualizations play a crucial role in understanding class distributions and stress-related ECG patterns. Confusion matrices, ROC curves, and signal waveform comparisons are employed to illustrate the model's performance and the relationship between ECG features and emotional states.
+
+In conclusion, this project highlights the potential of CNNs in interpreting physiological signals for emotion recognition, paving the way for advancements in affective computing and personalized healthcare solutions.
