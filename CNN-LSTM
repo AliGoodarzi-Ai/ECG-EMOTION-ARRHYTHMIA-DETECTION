@@ -1,0 +1,7 @@
+
+Deep CNN-LSTM for Disease Recognition [30]
+Core Concepts:
+
+Architecture Design:
+Integration of CNN and LSTM for improved medical diagnosis.
+Details about how CNN captures spatial features while LSTM captures temporal dynamics.
